@@ -23,7 +23,7 @@ const LandingPage = () => {
               onClick={() => navigate('/auth')}
               className="bg-indigo-600 text-white px-5 py-2 rounded-full font-bold shadow-md shadow-indigo-200 hover:bg-indigo-700 hover:shadow-lg transition-all active:scale-95"
             >
-              Join Now
+              Get Started
             </button>
           </div>
         </div>
@@ -31,9 +31,7 @@ const LandingPage = () => {
 
       {/* Hero Section */}
       <main className="flex-1">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
-          <DailyRojgarPromoBanner />
-        </div>
+        
 
         {/* How it works */}
         <div className="py-24 bg-gray-50">
@@ -61,25 +59,6 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* Mobile UI Showcase CTA */}
-        <div className="py-16 bg-gradient-to-r from-indigo-50 to-purple-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="inline-block px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold mb-4">
-              ✨ NEW
-            </span>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">See Our New Mobile Dashboard</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-              Experience the beautiful, modern interface designed specifically for Indian workers. Premium design with real-time job listings, earnings tracking, and smart features.
-            </p>
-            <button
-              onClick={() => navigate('/showcase/mobile-ui')}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all"
-            >
-              <span>🎨 View Mobile UI Demo</span>
-              <ArrowRight size={20} />
-            </button>
-          </div>
-        </div>
       </main>
 
       {/* Footer */}
