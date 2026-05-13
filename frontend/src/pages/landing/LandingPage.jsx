@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Logo from '../../components/common/Logo';
 import DailyRojgarPromoBanner from '../../components/landing/DailyRojgarPromoBanner';
 import { ArrowRight, ShieldCheck, Zap, Users } from 'lucide-react';
+import Footer from '../../components/layout/Footer';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -73,23 +74,7 @@ const LandingPage = () => {
 
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <Logo showText={true} className="grayscale brightness-200" />
-            <p className="text-sm text-gray-500 max-w-xs text-center md:text-left">Empowering India's unorganized workforce through technology.</p>
-          </div>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-            <a href="#" className="hover:text-white transition-colors">Support</a>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center md:text-left">
-          &copy; {new Date().getFullYear()} Daily Rojgar. All rights reserved.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
