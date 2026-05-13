@@ -44,7 +44,29 @@ const LandingPage = () => {
 
       {/* Hero Section */}
       <main className="flex-1">
-        
+        <section className="bg-blue-600 text-white">
+          <div className="container mx-auto px-4 py-20">
+            <div className="flex flex-wrap items-center">
+              <div className="w-full md:w-1/2">
+                <h1 className="text-5xl font-bold mb-4">India’s #1 platform</h1>
+                <p className="text-xl mb-8">
+                  labour and mistri (skilled masons) for construction
+                </p>
+                <div className="flex space-x-4">
+                  <button className="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold">
+                    Continue with Google
+                  </button>
+                  <button className="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold">
+                    Continue with Email
+                  </button>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 mt-10 md:mt-0">
+                <img src="/hero-main.png" alt="Labour and Mistri" className="h-80 w-full object-cover rounded-md" />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* How it works */}
         <div className="py-24 bg-gray-50">
