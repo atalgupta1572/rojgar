@@ -7,12 +7,24 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-sans selection:bg-indigo-100 selection:text-indigo-900">
+    <div className="min-h-screen bg-gray-50 flex flex-col font-sans selection:bg-sky-100 selection:text-sky-900">
       {/* Navbar */}
-      <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+      <nav className="bg-sky-100/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Logo />
           <div className="flex items-center gap-4">
+            <button 
+              onClick={() => navigate('/about')}
+              className="text-gray-600 font-medium hover:text-gray-900 transition-colors"
+            >
+              About
+            </button>
+            <button 
+              onClick={() => navigate('/help')}
+              className="text-gray-600 font-medium hover:text-gray-900 transition-colors"
+            >
+              Help
+            </button>
             <button 
               onClick={() => navigate('/auth')}
               className="text-gray-600 font-medium hover:text-gray-900 transition-colors hidden sm:block"
@@ -21,7 +33,7 @@ const LandingPage = () => {
             </button>
             <button 
               onClick={() => navigate('/auth')}
-              className="bg-indigo-600 text-white px-5 py-2 rounded-full font-bold shadow-md shadow-indigo-200 hover:bg-indigo-700 hover:shadow-lg transition-all active:scale-95"
+              className="bg-sky-600 text-white px-5 py-2 rounded-full font-bold shadow-md shadow-sky-200 hover:bg-sky-700 hover:shadow-lg transition-all active:scale-95"
             >
               Get Started
             </button>
@@ -45,7 +57,7 @@ const LandingPage = () => {
               {[
                 { icon: Zap, title: "Real-Time Matching", desc: "Our smart system connects jobs with nearby available workers instantly using GPS.", color: "text-amber-500", bg: "bg-amber-100" },
                 { icon: ShieldCheck, title: "Trusted Platform", desc: "Verified profiles, transparent ratings, and clear wage agreements build mutual trust.", color: "text-green-500", bg: "bg-green-100" },
-                { icon: Users, title: "Direct Connection", desc: "No agencies or middlemen cutting into your pay. Talk directly and get the job done.", color: "text-indigo-500", bg: "bg-indigo-100" }
+                { icon: Users, title: "Direct Connection", desc: "No agencies or middlemen cutting into your pay. Talk directly and get the job done.", color: "text-sky-500", bg: "bg-sky-100" }
               ].map((feature, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className={`w-14 h-14 ${feature.bg} ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
