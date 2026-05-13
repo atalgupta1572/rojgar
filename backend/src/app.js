@@ -11,6 +11,7 @@ import jobRoutes from './modules/job/job.routes.js';
 // Load env vars
 dotenv.config();
 
+
 // Connect Database
 connectDB();
 
