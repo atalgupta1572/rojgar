@@ -3,6 +3,7 @@ import Logo from '../../components/common/Logo';
 import DailyRojgarPromoBanner from '../../components/landing/DailyRojgarPromoBanner';
 import { ArrowRight, ShieldCheck, Zap, Users } from 'lucide-react';
 import Footer from '../../components/layout/Footer';
+import JobSearch from '../../components/landing/JobSearch';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -67,6 +68,18 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
+
+        <JobSearch />
+
+        <div className="text-center py-6 bg-gray-50">
+          <p className="text-sm text-gray-700">
+            Daily Rojgar{' '}
+            <a href="#" className="text-sky-600 font-medium hover:underline">
+              हिंदी
+            </a>{' '}
+            में भी उपलब्ध है
+          </p>
+        </div>
 
         {/* How it works */}
         <div className="py-24 bg-gray-50">
