@@ -27,10 +27,10 @@ const LandingPage = () => {
               Help
             </button>
             <button 
-              onClick={() => navigate('/auth')}
-              className="text-gray-600 font-medium hover:text-gray-900 transition-colors hidden sm:block"
+              onClick={() => navigate('/auth?type=signup')}
+              className="text-gray-600 font-medium hover:text-gray-900 transition-colors"
             >
-              Log in
+              Sign Up
             </button>
             <button 
               onClick={() => navigate('/auth')}
