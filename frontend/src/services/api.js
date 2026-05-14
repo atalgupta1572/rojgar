@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL + '/api';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+console.log('Environment variable VITE_API_BASE_URL:', BASE_URL);
+
+const API_BASE_URL = BASE_URL ? `${BASE_URL}/api` : 'http://localhost:5000/api';
 
 console.log('api base URL:', API_BASE_URL);
 
