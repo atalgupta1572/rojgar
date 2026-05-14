@@ -1,15 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
-console.log('Environment variable VITE_API_BASE_URL:', BASE_URL);
-
-const API_BASE_URL = BASE_URL ? `${BASE_URL}/api` : 'http://localhost:5000/api';
-
-console.log('api base URL:', API_BASE_URL);
-
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: 'http://localhost:7007/api',
 });
 
 // Request interceptor to add the auth token to headers

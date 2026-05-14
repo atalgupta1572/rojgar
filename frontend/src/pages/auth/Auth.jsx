@@ -26,7 +26,6 @@ const AuthPage = () => {
     }
     setError('');
     try {
-      console.log("url",process.env.REACT_APP_API_BASE_URL);
       const res = await api.post('/auth/send-otp', { phone });
       setStep(2);
       // For testing purposes only - remove in production
