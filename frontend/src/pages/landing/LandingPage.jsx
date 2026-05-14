@@ -13,7 +13,27 @@ const LandingPage = () => {
       {/* Navbar */}
       <nav className="bg-sky-100/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Logo />
+          <div className="flex items-center gap-4">
+            <Logo />
+            <button 
+              onClick={() => navigate('/')}
+              className="text-gray-600 font-medium hover:text-gray-900 transition-colors"
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => navigate('/reviews')}
+              className="text-gray-600 font-medium hover:text-gray-900 transition-colors"
+            >
+              Company Reviews
+            </button>
+            <button 
+              onClick={() => navigate('/salary-guide')}
+              className="text-gray-600 font-medium hover:text-gray-900 transition-colors"
+            >
+              Salary Guide
+            </button>
+          </div>
           <div className="flex items-center gap-4">
             <button 
               onClick={() => navigate('/about')}
