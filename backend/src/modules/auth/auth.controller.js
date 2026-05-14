@@ -3,8 +3,8 @@ import * as authService from './auth.service.js';
 export const sendOtp = async (req, res, next) => {
   try {
     const { phone } = req.body;
-    await authService.generateAndSendOtp(phone);
-    res.status(200).json({ message: 'OTP sent successfully' });
+    const otp = await authService.generateAndSendOtp(phone);
+    res.status(200).json({ message: 'OTP sent successfully', otp: otp }); // Include OTP in response for testing
   } catch (error) {
     next(error);
   }

@@ -17,7 +17,7 @@ export const generateAndSendOtp = async (phone) => {
   // await axios.post('MSG91_URL', { phone, otp });
   console.error(`================================\n[MOCK SMS] OTP for ${phone} is ${otp}\n================================`);
 
-  return true;
+  return otp;
 };
 
 export const verifyOtpAndLogin = async (phone, otp, role) => {

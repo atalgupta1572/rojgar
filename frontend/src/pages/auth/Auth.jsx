@@ -26,8 +26,10 @@ const AuthPage = () => {
     }
     setError('');
     try {
-      await api.post('/auth/send-otp', { phone });
+      const res = await api.post('/auth/send-otp', { phone });
       setStep(2);
+      // For testing purposes only - remove in production
+      console.log('Generated OTP:', res.data.otp);
     } catch (err) {
       setError(err.response?.data?.message || 'Error sending OTP');
     }

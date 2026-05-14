@@ -7,6 +7,7 @@ import connectDB from './config/db.js';
 import authRoutes from './modules/auth/auth.routes.js';
 import userRoutes from './modules/user/user.routes.js';
 import jobRoutes from './modules/job/job.routes.js';
+import { setupSwagger } from './config/swagger.js';
 
 // Load env vars
 dotenv.config();
@@ -27,6 +28,9 @@ app.use(morgan('dev'));
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'API is running' });
 });
+
+// Setup Swagger UI
+setupSwagger(app);
 
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
